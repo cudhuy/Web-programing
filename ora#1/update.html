@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Profile</title>
+
+  <link rel="stylesheet" href="./css/profile.css">
+</head>
+
+<body>
+  <div class="header-container">
+    <div class="container">
+      <img class="headerImg" id="" src="https://ctt-sis.hust.edu.vn/Content/Images/logo-cttdt.png" alt="Logo and name HUST" style="height: 100%" />
+    </div>
+  </div>
+
+  <div class="menu"></div>
+
+  <div class="header">Chỉnh sửa thông tin sinh viên</div>
+
+  <form class="body" method="post" id="infoForm" action="/index.html">
+    <div class="col-1" id="form">
+      <span>
+        <div class="body-left">
+          <label for="name">Họ và tên <small style="color: red">(*)</small></label> &nbsp; :
+          <input id="name" type="text"></input><br />
+        </div>
+        <div class="body-left">
+          <label for="year">Năm vào trường <small style="color: red">(*)</small></label> &nbsp; :
+          <select id="year" name="year" form="infoForm" class="body-select">
+            <option value="year">Năm</option>
+            <option value="1990">1990</option>
+            <option value="1991">1991</option>
+            <option value="1992">1992</option>
+            <option value="1993">1993</option>
+            <option value="1994">1994</option>
+            <option value="1995">1995</option>
+            <option value="1996">1996</option>
+            <option value="1997">1997</option>
+            <option value="1998">1998</option>
+            <option value="1999">1999</option>
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+          </select>
+          <br />
+        </div>
+        <div class="body-left">
+          <label for="lever">Bậc đào tạo <small style="color: red">(*)</small></label> &nbsp; :
+          <select name="lever" id="lever" form="infoForm" class="body-select">
+            <option>Đại học đại trà</option>
+            <option>Chương trình tiên tiến</option>
+          </select>
+          <br />
+        </div>
+        <div class="body-left">
+          <label for="programming">Chương trình <small style="color: red">(*)</small></label> &nbsp; :
+          <input id="programming" type="text"></input><br />
+        </div>
+        <div class="body-left">
+          <label for="faculty">Khoa/Viện quản lý <small style="color: red">(*)</small></label> &nbsp; :
+          <input id="faculty" type="text"></input><br />
+        </div>
+      </span>
+    </div>
+    <div class="col-2" id="form">
+      <span>
+        <div class="body-right">
+          <label for="status">Tình trạng học tập <small style="color: red">(*)</small></label> &nbsp; :
+          <select name="status" id="status" form="infoForm" class="body-select">
+            <option>Học</option>
+            <option>Thôi học</option>
+            <option>Tốt nghiệp</option>
+          </select>
+          <br />
+        </div>
+        <div class="body-right">
+          <label for="sex">Giới tính <small style="color: red">(*)</small></label> &nbsp; :
+          <select name="sex" id="sex" form="infoForm" class="body-select">
+            <option>Nam</option>
+            <option>Nữ</option>
+          </select>
+          <br />
+        </div>
+        <div class="body-right">
+          <label for="classes">Lớp <small style="color: red">(*)</small></label> &nbsp; :
+          <input id="classes" type="text"></input><br />
+        </div>
+        <div class="body-right">
+          <label for="course">Khóa học <small style="color: red">(*)</small></label> &nbsp; :
+          <input id="course" type="text"></input> <br />
+        </div>
+        <div class="body-right">
+          <label for="email">Email <small style="color: red">(*)</small></label> &nbsp; :
+          <input id="email" type="text"></input><br />
+        </div>
+      </span>
+    </div>
+
+    <div class="col-3">
+      <button><input type="submit" value="OK"></button>
+      <button><a href="index.html">Cancel</a></button>
+    </div>
+  </form>
+
+  <div class="note"><strong style="text-decoration: underline;">Chú ý:</strong> Muốn thay đổi thông tin phải nhập đầy đủ
+    các trường dữ liệu. Nếu thông tin <b style="color: #8c1515">chưa </b>được nhập đầy đủ và bấm <b style="color: #8c1515">'OK'
+    </b>thì sẽ quay lại thông tin mặc định ban đầu.
+    <br />Bấm 'OK' để thay đổi thông tin (nếu đã nhập đầy đủ). 'Cancel' để về trang chủ (thông tin không được thay đổi)
+  </div>
+
+  <footer class="footer">
+    <div class="footerContent">
+      <div class="footerMain">
+        <div class="footerLeft"></div>
+        <div class="footerRight">
+          <hr />
+          <b>Trường Đại học Bách Khoa Hà Nội</b>
+          <br />
+          <br />
+          <p>Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

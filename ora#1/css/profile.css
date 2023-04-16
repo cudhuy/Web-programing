@@ -1,0 +1,194 @@
+.header-container {
+    border-top: solid 10px #c40a0a;
+    width: 100vw;
+}
+
+.container {
+    height: 110px;
+    padding: 10px;
+    cursor: pointer;
+    max-width: 1140px;
+    margin: auto;
+}
+
+.container img {
+    height: 100%;
+    width: auto;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.menu {
+    height: 10px;
+    background-color: white;
+    box-shadow: 3px -5px 7px var(--text-color-3rd);
+    padding: 0 3px;
+    display: flex;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    margin: 20px 0px 10px 0px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-color-3rd);
+}
+
+.body {
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.body-select {
+    width: 206px;
+    margin-left: 10px;
+    height: 30px;
+    font-size: 19px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.body-select option {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 19px;
+}
+
+.col-1 {
+    flex-basis: 45%;
+    /* display: inline; */
+    justify-content: right;
+    padding: 0 30px 0 0;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.col-1 div {
+    margin: 10px 10px 10px 10px;
+    display: flex;
+}
+
+.col-1 div label {
+    width: 180px;
+}
+
+.col-1 div input {
+    margin-left: 10px;
+    width: 200px;
+    font-size: 19px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.col-1 .body-left {
+    float: right;
+}
+
+.col-2 {
+    flex-basis: 45%;
+    /* display: inline; */
+    padding: 0 0 0 30px;
+}
+
+.col-2 div {
+    margin: 10px 10px 10px 10px;
+    display: flex;
+}
+
+.col-2 div label {
+    width: 180px;
+}
+
+.col-2 div input {
+    margin-left: 10px;
+    width: 200px;
+    font-size: 19px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.col-2 .body-right {
+    float: left;
+}
+
+.col-3 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.col-3 button {
+    margin: 10px 10px 10px 10px;
+    font-family: "Times New Roman", Times, serif;
+    width: 90px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.col-3 input {
+    border: none;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.col-3 button a {
+    width: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+.col-3 button a:hover {
+    color: var(--text-color-3rd);
+}
+
+.col-3 button input:hover {
+    color: var(--text-color-3rd);
+    cursor: pointer;
+}
+
+.note {
+    padding-left: 0px;
+    margin-top: 20px;
+    margin-bottom: 45px;
+    margin-left: 20px;
+    font-family: "Arimo", sans-serif;
+}
+
+.footer {
+    width: 100%;
+    float: left;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.1;
+}
+
+.footerMain {
+    width: 100%;
+    float: left;
+    background: url(../img/footer.jpg) no-repeat top;
+    height: 100px;
+}
+
+.footerLeft {
+    width: 40%;
+    float: left;
+    margin: 2%;
+}
+
+.footerRight {
+    width: 35%;
+    float: right;
+    text-align: right;
+    margin-right: 6.5%;
+    color: #fff;
+}
+
+.footerRight hr {
+    margin: 10px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #fff;
+}
