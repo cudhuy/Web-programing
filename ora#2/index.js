@@ -52,7 +52,7 @@ for (inputItem of inputList) {
 }
 
 //click edit
-const clickEdit = () => {                                                                                                 c
+const clickEdit = () => {                                                                                                 
 	document.getElementById('btn-group').style.display = 'flex';
 	document.getElementById('change-avatar').style.display = 'block';
 
