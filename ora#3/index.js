@@ -1,9 +1,10 @@
 let groupItemNumbers = 0;
 let groupDeletedId = 0;
 let infoDeletedEl;
+// let prevScrollpos = window.pageYOffset;
 
 const footer = document.querySelector('.ctt-footer');
-let prevScrollpos = window.pageYOffset;
+const header = document.querySelector('.ctt-header');
 
 const splitString = (str) => {
 	return str.split('_')[0];
@@ -12,11 +13,11 @@ const splitString = (str) => {
 const printPDF = (event) => {
 	html2canvas(document.getElementById('print'), {
 		onrendered: function (canvas) {
-			var data = canvas.toDataURL();
+			var contentData = canvas.toDataURL();
 			var docDefinition = {
 				content: [
 					{
-						image: data,
+						image: contentData,
 						width: 500,
 					},
 				],
@@ -248,15 +249,58 @@ const addOptionItem = (event) => {
 	}
 };
 
-window.addEventListener('scroll', function () {
-	const currentScrollPos = window.pageYOffset;
-	if (prevScrollpos > currentScrollPos || currentScrollPos === 300) {
-		// added condition to check for top of page
-		footer.classList.remove('hide-footer');
-	} else if (prevScrollpos < currentScrollPos && currentScrollPos > 0) {
-		// added condition to check if user has scrolled back to the top of the page
-		footer.classList.add('hide-footer');
+function showHeader() {
+	header.classList.remove('hide-header');
+}
+
+function hideHeader() {
+	header.classList.add('hide-header');
+}
+
+function showFooter() {
+	footer.classList.remove('hide-footer');
+}
+
+function hideFooter() {
+	footer.classList.add('hide-footer');
+}
+
+function checkHeaderVisibility() {
+	const scrollTop =
+		window.scrollY ||
+		window.pageYOffset ||
+		document.body.scrollTop +
+			((document.documentElement && document.documentElement.scrollTop) || 0);
+
+	if (scrollTop > 1080) {
+		hideHeader();
+	} else {
+		showHeader();
 	}
-	prevScrollpos = currentScrollPos;
-	
-});
+}
+
+function checkFooterVisibility() {
+	const windowHeight = window.innerHeight;
+	const documentHeight = document.documentElement.scrollHeight;
+	const scrollTop =
+		window.scrollY ||
+		window.pageYOffset ||
+		document.body.scrollTop +
+			((document.documentElement && document.documentElement.scrollTop) || 0);
+
+	if (documentHeight - (scrollTop + windowHeight) <= 0) {
+		showFooter();
+	} else {
+		hideFooter();
+	}
+}
+
+window.addEventListener('scroll', checkHeaderVisibility);
+window.addEventListener('resize', checkHeaderVisibility);
+checkHeaderVisibility();
+window.addEventListener('scroll', checkFooterVisibility);
+window.addEventListener('resize', checkFooterVisibility);
+checkFooterVisibility();
+window.onload = function () {
+	window.scrollTo(0, 0);
+};

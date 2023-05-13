@@ -7,12 +7,13 @@
     padding-top: 10px;
     border-top: 10px solid #c40a0a;
     box-shadow: var(--text-color-2nd) 0px -20px 10px -20px inset;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
 }
 
 
 .header-container {
     width: 80%;
-    /* max-width: 1170px; */
     max-width: 100vh;
     height: 100px;
     margin: auto;
@@ -89,6 +90,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.group_item:last-child {
+  margin-bottom: 15vh;
 }
 
 .group_header .group_name {
@@ -256,10 +261,10 @@
     display: flex;
     flex-direction: row;
     justify-content: end;
-    position: fixed;
+    position: fixed  ;
     bottom: 0;
     left: 0;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.15s ease-in-out;
 }
 
 .footer-content {
@@ -271,6 +276,7 @@
     font-size: 1.4rem;
 }
 
+.hide-header,
 .hide-footer {
   transform: translateY(100%);
 }
