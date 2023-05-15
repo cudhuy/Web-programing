@@ -4,4 +4,5 @@
 - Develop both client-side scripts and server-side scripts
 - Improve group working skill, presentation skill
 ## The final project 
-- Will be update later
+- Topic: will be update later
+- Project URL: https://github.com/cudhuy/Web-programing/tree/final/final-project
